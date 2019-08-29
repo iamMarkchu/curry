@@ -1,12 +1,5 @@
-p, editors, product, read
-p, editors, product, edit
-p, editors, product, view
-p, editors, product, delete
-p, editors, category, read
-p, editors, category, edit
-p, editors, category, view
-p, editors, category, delete
-p, editors, order, view
-g, 1, editors
-g, 2, editors
-g, 2, producers
+p, normal_user, /index/*, *
+p, admin, *, *
+g, 1, normal_user
+g, 2, normal_user
+g, 1, admin

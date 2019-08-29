@@ -46,18 +46,18 @@ func GetToken(userId string, role string) Auth {
 }
 
 // 校验token是否有效
-func CheckToken(tokenStr string) (string, bool) {
+func CheckToken(tokenStr string) (string, string, bool) {
 	token, err := jwt.ParseWithClaims(tokenStr, &ApiClaims{}, func(*jwt.Token) (interface{}, error) {
 		return key, nil
 	})
 	if err != nil {
 		fmt.Println("parase with claims failed.", err)
-		return "", false
+		return "", "", false
 	}
 	if claims, ok := token.Claims.(*ApiClaims); ok && token.Valid {
-		return claims.UserId, true
+		return claims.UserId, claims.Role, true
 	} else {
-		return "", false
+		return "", "", false
 	}
 }
 

@@ -1,5 +1,8 @@
 {
   "jwtKey": "qwertyuiop",
+  "mysql": {
+    "dataSource": "root:chukui@/orm_test?charset=utf8"
+  },
   "redis": {
     "host": "127.0.0.1:6379",
     "pwd": "",
