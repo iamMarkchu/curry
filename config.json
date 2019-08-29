@@ -1,0 +1,12 @@
+{
+  "jwtKey": "qwertyuiop",
+  "redis": {
+    "host": "127.0.0.1:6379",
+    "pwd": "",
+    "db": 0
+  },
+  "casbin": {
+    "modelPath": "./rbac_model.conf",
+    "policyPath": "./policy.csv"
+  }
+}
